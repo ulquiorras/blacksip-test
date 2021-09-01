@@ -1,0 +1,118 @@
+@media only screen and (max-width: 1440px){
+    //Form
+
+    .form-group .field{
+        max-width: 79%;
+    }
+
+    //List 
+
+    .col2{
+        max-width: 160px;
+    }
+
+}
+
+@media only screen and (max-width: 1280px){
+    //Form
+
+    .form-group .field{
+        max-width: 76%;
+    }
+
+    //List 
+
+    .col2{
+        max-width: 90px;
+    }
+}
+
+@media only screen and (max-width: 1139px){
+    //Form
+
+    .form-group .field{
+        max-width: 74%;
+    }
+
+    //List 
+
+    .col2{
+        max-width: 60px;
+    }
+}
+
+@media only screen and (max-width: 1023px){
+    .todo{
+        display:flex;
+        flex-wrap: wrap;
+    }
+
+    .row-1{
+        flex: 1;
+        min-width: 400px;
+    }
+
+    .row-2{
+        flex: 1;
+        min-width: 400px;
+    }
+
+    .col2{
+        max-width: 120px;
+    }
+}
+
+@media only screen and (max-width: 920px){
+    .row-2{
+        float: none;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .col2{
+        max-width: 200px;
+    }
+}
+
+
+
+@media only screen and (max-width: 880px){
+    
+    .form-group .field{
+        max-width: 82%;
+    }
+
+    //List 
+
+    .col2{
+        max-width: 1000px;
+    }
+    
+}
+
+@media only screen and (max-width: 880px){
+    
+    .form-group .field{
+        max-width: 82%;
+    }
+
+    //List 
+
+    .col2{
+        max-width: 100px;
+    }
+    
+}
+
+@media only screen and (max-width: 665px){
+    
+    .form-register{
+        grid-template-columns: 1fr;
+    }
+
+    .buttons{
+        grid-column: 1;
+    }
+
+    
+}
