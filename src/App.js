@@ -4,9 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faUser, faEnvelope, faPhone, faMapMarkerAlt,faMapMarkedAlt} from '@fortawesome/free-solid-svg-icons';
 import {List} from './components/List'
 
+
 function App() {
+
+
   return (
-    <div className="todo">
+    <main>
       <div className="row-1">
         <h4>DIRECCION DE ENVIO</h4>
         <hr />
@@ -77,7 +80,7 @@ function App() {
       <div className="row-2">
         <List/>
       </div>
-    </div>
+    </main>
   );
 }
 

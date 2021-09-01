@@ -1,8 +1,23 @@
-import React from 'react';
-import image from '../assets/uMOPx1T.jpg'
+import React, {useState, useEffect} from 'react';
 
-export class List extends React.Component{
-    render(){
+export const List = () =>{
+
+
+        const url = ('https://blackisp.herokuapp.com/products');
+        const [product, setProduct] = useState([]);
+
+        useEffect(() => {
+            getData()
+        }, [])
+
+        const getData = async () =>{
+            const data = await fetch(url)
+            const products = await data.json()
+            /* console.log(products) */
+            setProduct(products)
+        }
+        
+
         return(
         <div>
             <div className="list">
@@ -10,17 +25,21 @@ export class List extends React.Component{
                     <div className="header">
                         <h4><strong>RESUMEN DE LA ORDEN</strong></h4>
                     </div>
-                    <div className="body">
-                        <div className="col1">
-                            <img src={image} />
+                    
+                    { product.map(function(object, i){
+                        return<div className="body" key={i}>
+                            <div className="col1">
+                                <img src={object['image']} />
+                            </div>
+                            <div className="col2">
+                                <p>{object['name']}</p>
+                            </div>
+                            <div className="col3">
+                                <p><strong>${object['price']}</strong></p>
+                            </div>
                         </div>
-                        <div className="col2">
-                            <p>COFRE LADY EMBLEM 75 ML EDP + 7,5 ML EDP + 100 ML B</p>
-                        </div>
-                        <div className="col3">
-                            <p><strong>$1890</strong></p>
-                        </div>
-                    </div>
+                    })}
+                        
                     <div className="btn">
                             <button type="submit" className="btn-editar"><strong>Editar</strong></button>
                         </div>
@@ -60,7 +79,6 @@ export class List extends React.Component{
             </div>
         </div>
         )
-    }
+
 }
 
-export default List;

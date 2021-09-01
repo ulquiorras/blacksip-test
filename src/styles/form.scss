@@ -2,6 +2,15 @@
 @import 'list';
 @import 'responsive';
 
+*{
+    box-sizing: border-box;
+}
+
+main{
+    width: 90%;
+    margin: auto;
+}
+
 .form-register{
     margin-top: 50px;
     padding: 0 50px 10px 50px;
@@ -29,7 +38,7 @@
 .form-group .field{
     padding: 7px;
     border: none;
-    width: 80%;
+    width: 85%;
     margin-left: 4px;
 }
 
